@@ -1,12 +1,15 @@
+  var trackList;
+  var linktoSong;
 (function(ENV) {
   const client_id = ENV.client_id;
 
   // Set Variables
   var firstTrack;
-  var trackList;
+  // var trackList;
   var currentTrack;
   var imgURL;
   var trackName;
+  // var linktoSong;
 
   // Auth with
   SC.initialize({
@@ -23,7 +26,13 @@
     firstTrack = trackList[x].id;
 
 
+
+
     SC.stream('/tracks/' + firstTrack).then(function(player) {
+
+      //Grab Song Permalink
+      linktoSong = trackList[x].permalink_url;
+      document.querySelector('a.link').href = linktoSong;
 
       //Grab and Display Art
       imgURL = trackList[x].artwork_url;
@@ -38,7 +47,7 @@
       })();
       //Grab and Display Track Name
       trackName = trackList[x].title;
-      document.querySelector('.name').innerText = trackName;
+      document.querySelector('.name').innerHTML = "<a href=" + linktoSong + " target='_blank'>" + trackName; + "</a>";
 
       //Buttons
       (function btns() {
@@ -81,7 +90,7 @@
           })();
           //Grab and Display Track Name
           trackName = trackList[x].title;
-          document.querySelector('.name').innerText = trackName;
+          document.querySelector('.name').innerHTML = "<a href=" + linktoSong + " target='_blank'>" + trackName; + "</a>";
 
           player.play();
           document.querySelector('.eq').classList.add('visible')

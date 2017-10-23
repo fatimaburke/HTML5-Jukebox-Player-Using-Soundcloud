@@ -17,6 +17,15 @@ body {
  height: 100vh;
 }
 
+.name a {
+  color:#fff;
+  text-decoration: none;
+}
+
+.name a:hover {
+  color:#ccc;
+}
+
 .art {
   margin: 0 auto;
   display: block;
@@ -24,6 +33,10 @@ body {
   width: auto;
   border-radius: 100px;
   border: 20px rgba(117, 108, 125, 0.2) solid;
+}
+
+.art:hover {
+  cursor: pointer;
 }
 
 .eq {
