@@ -1,15 +1,13 @@
-  var trackList;
-  var linktoSong;
 (function(ENV) {
   const client_id = ENV.client_id;
 
   // Set Variables
   var firstTrack;
-  // var trackList;
+  var trackList;
   var currentTrack;
   var imgURL;
   var trackName;
-  // var linktoSong;
+  var linktoSong;
 
   // Auth with
   SC.initialize({
@@ -24,9 +22,6 @@
     trackList = tracks;
     x = 0;
     firstTrack = trackList[x].id;
-
-
-
 
     SC.stream('/tracks/' + firstTrack).then(function(player) {
 
