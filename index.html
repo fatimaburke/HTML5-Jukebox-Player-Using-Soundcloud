@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Soundcloud Jukebox</title>
+    <link rel="stylesheet" href="scjb.css">
+  </head>
+  <body>
+<div class="container">
+    <img class="art" src="img/empty.png" alt="Album Art"/>
+    <img class="eq" src="img/playing.gif" alt="">
+    <div class="name">Track Name</div>
+    <div class="btns">
+      <button class="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <button class="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+      <button class="stop"><i class="fa fa-stop" aria-hidden="true"></i></button>
+      <button class="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+    </div>
+    <footer>Sounds Provided by <i class="fa fa-soundcloud" aria-hidden="true"></i></footer>
+</div>
+
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.2.2.js"></script>
+    <script src="js/env.js"></script>
+    <script src="js/scjb.js"></script>
+    <script src="https://use.fontawesome.com/6b7272baf0.js"></script>
+  </body>
+</html>
