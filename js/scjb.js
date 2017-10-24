@@ -34,7 +34,6 @@
       (function() {
         if (!imgURL) {
           return './img/empty.png';
-          document.body.style.backgroundColor = "#000";
         } else {
           document.querySelector('.art').src = imgURL;
           document.body.style.background = "url(" + imgURL + ") no-repeat";
@@ -77,7 +76,6 @@
           (function() {
             if (!imgURL) {
               return './img/empty.png';
-              document.body.style.backgroundColor = "#000";
             } else {
               document.querySelector('.art').src = imgURL;
               document.body.style.background = "url(" + imgURL + ") no-repeat";
